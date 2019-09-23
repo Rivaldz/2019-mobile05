@@ -6,4 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".activity.StaticActivity">
 
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="polinema.ac.id.starterchapter05.fragment.BlueFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment6"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <fragment
+        android:id="@+id/fragment6"
+        android:name="polinema.ac.id.starterchapter05.fragment.RedFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
