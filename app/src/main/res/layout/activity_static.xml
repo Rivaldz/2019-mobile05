@@ -6,22 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".activity.StaticActivity">
 
-    <fragment
-        android:id="@+id/fragment7"
-        android:name="polinema.ac.id.starterchapter05.fragment.BlueFragment"
+    <androidx.constraintlayout.widget.Constraints
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment6"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <fragment
-        android:id="@+id/fragment6"
-        android:name="polinema.ac.id.starterchapter05.fragment.RedFragment"
+        android:id="@+id/fragment8"
+        android:name="polinema.ac.id.starterchapter05.fragment.BlueFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="356dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
