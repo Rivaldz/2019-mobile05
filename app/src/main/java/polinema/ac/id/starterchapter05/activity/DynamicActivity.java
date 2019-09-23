@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import polinema.ac.id.starterchapter05.R;
+import polinema.ac.id.starterchapter05.fragment.BlueFragment;
 import polinema.ac.id.starterchapter05.fragment.RedFragment;
 
 public class DynamicActivity extends AppCompatActivity {
@@ -19,10 +20,17 @@ public class DynamicActivity extends AppCompatActivity {
 
     public void handleClickLoadRedFragment(View view) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new RedFragment());
+        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new RedFragment(),"Red Fragment");
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
+        fragmentTransaction.addToBackStack(null);
     }
 
     public void handleClickLoadBLueFragment(View view) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new BlueFragment(),"Blue Fragment");
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.commit();
+        fragmentTransaction.addToBackStack(null);
     }
 }
