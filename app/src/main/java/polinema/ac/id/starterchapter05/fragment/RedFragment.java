@@ -12,19 +12,33 @@ import android.view.ViewGroup;
 
 import polinema.ac.id.starterchapter05.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link RedFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link RedFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class RedFragment extends Fragment {
+
+//    static boolean activityRed = false;
     public RedFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+    }
+
+    @Override
+    public boolean getUserVisibleHint() {
+        return super.getUserVisibleHint();
+    }
+    //    @Override
+//    public void onStart() {
+//        super.onStart();
+//        activityRed = true;
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        activityRed = false;
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
