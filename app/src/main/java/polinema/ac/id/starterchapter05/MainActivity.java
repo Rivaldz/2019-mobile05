@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import polinema.ac.id.starterchapter05.activity.DynamicActivity;
+import polinema.ac.id.starterchapter05.activity.MyFItness;
 import polinema.ac.id.starterchapter05.activity.StaticActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_praktikum_fragment(View view) {
+        Intent i = new Intent(this, MyFItness.class);
+        startActivity(i);
     }
 
     public void btn_dynamic_fragment(View view) {
