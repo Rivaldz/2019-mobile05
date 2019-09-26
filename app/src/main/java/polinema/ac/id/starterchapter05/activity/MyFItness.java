@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import polinema.ac.id.starterchapter05.R;
+import polinema.ac.id.starterchapter05.fragment.FragmentDIps;
 import polinema.ac.id.starterchapter05.fragment.FragmentFitness;
+import polinema.ac.id.starterchapter05.fragment.FragmentPushUp;
 
 public class MyFItness extends AppCompatActivity {
 
@@ -18,6 +20,19 @@ public class MyFItness extends AppCompatActivity {
     }
 
     public void handlerPushUp(View view) {
+        FragmentPushUp checkVisible = (FragmentPushUp) getSupportFragmentManager().findFragmentByTag("FRAGMENT_PUSH_UP");
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        if (checkVisible != null && checkVisible.isVisible() ){
+//            fragmentTransaction.commit();
+        }
+        else {
+//            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_left,R.anim.exit_from_left,R.anim.enter_from_left,R.anim.exit_from_right);
+            fragmentTransaction.replace(R.id.myFitnessPlaceholder,new FragmentPushUp(),"FRAGMENT_PUSH_UP");
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+
     }
 
     public void handlerHandStand(View view) {
@@ -37,5 +52,18 @@ public class MyFItness extends AppCompatActivity {
     }
 
     public void handlerDips(View view) {
+
+        FragmentDIps checkVisible = (FragmentDIps) getSupportFragmentManager().findFragmentByTag("FRAGMENT_DIPS");
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        if (checkVisible != null && checkVisible.isVisible() ){
+//            fragmentTransaction.commit();
+        }
+        else {
+//            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_left,R.anim.exit_from_left,R.anim.enter_from_left,R.anim.exit_from_right);
+            fragmentTransaction.replace(R.id.myFitnessPlaceholder,new FragmentDIps(),"FRAGMENT_DIPS");
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
     }
 }
